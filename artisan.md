@@ -1,8 +1,4 @@
-### 其他
-* **改变文件夹及子目录下所有文件（夹）权限` chmod -R 777 learnLaravel/`**
-* **要注意php版本和cli版本是否一致**
 
----
 ### artisan创建表文件
 * `php artisan make:migration create_comments_table`
  ```angular2html
