@@ -23,4 +23,12 @@ class RedirectIfAuthenticated
 
         return $next($request);
     }
+
+    /**
+     * 重定向
+     * redirectTo方法的优先级大于redirectTo属性
+     */
+    public function redirectTo(){
+        return '/path';
+    }
 }

@@ -42,7 +42,7 @@ class RegisterController extends Controller
 
     /**
      * Get a validator for an incoming registration request.
-     *
+     * 新用户注册的验证规则
      * @param  array  $data
      * @return \Illuminate\Contracts\Validation\Validator
      */
@@ -57,7 +57,7 @@ class RegisterController extends Controller
 
     /**
      * Create a new user instance after a valid registration.
-     *
+     * 负责使用Eloquent ORM 在数据库中创建新的App\User记录
      * @param  array  $data
      * @return \App\User
      */
