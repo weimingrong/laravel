@@ -35,8 +35,8 @@ require __DIR__.'/../vendor/autoload.php';
 |
 */
 
-$app = require_once __DIR__.'/../bootstrap/app.php';
-
+$app = require_once __DIR__.'/../bootstrap/app.php';  //获取laravel应用实例
+//laravel的第一个动作是 创建服务容器实例
 /*
 |--------------------------------------------------------------------------
 | Run The Application
@@ -48,9 +48,9 @@ $app = require_once __DIR__.'/../bootstrap/app.php';
 | and wonderful application we have prepared for them.
 |
 */
-
+//请求被发送到HTTP内核或console内核（分别用于处理web请求和artisan命令，取决于进入应用的请求类型）
 $kernel = $app->make(Illuminate\Contracts\Http\Kernel::class);
-
+//交给路由器 进行分发请求到路由或控制器，同时运行所有路由指定的中间件
 $response = $kernel->handle(
     $request = Illuminate\Http\Request::capture()
 );

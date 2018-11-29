@@ -131,7 +131,8 @@ return [
     | this array to grant expanded functionality to your applications.
     |
     */
-
+//应用的所有服务提供者
+//负责启动框架的所有各种各样的组件，如数据库、队列、验证器、以及路由组件等
     'providers' => [
 
         /*
