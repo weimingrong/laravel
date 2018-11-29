@@ -11,24 +11,28 @@
 ---
 ### nginx配置
 ```angular2html
+
 server {
     listen       8601;
-    set $host_path "/data/www/learnLaravel/public";
-        server_name localhost;
-        charset utf-8;
+    server_name  localhost;
+
+    set $php_cgi '127.0.0.1:9000';
+    set $www_root '/data/www/learnLaravel/public';
+
+    root $www_root;
 
     location ~ \.php$ {
-        root $host_path;
-        fastcgi_pass   127.0.0.1:9000;
+        fastcgi_pass   $php_cgi;
         fastcgi_index  index.php;
         include        fastcgi.conf;
     }
 
     location / {
         index index.html index.php;
-        root $host_path;
+        try_files $uri $uri/ /index.php?$query_string;
     }
 }
+
 ```
 ---
 ### 其他
