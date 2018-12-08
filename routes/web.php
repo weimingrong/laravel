@@ -18,4 +18,7 @@ Route::get('/', function () {
 //登录相关路由都定义在上面Auth::routes()方法内
 Auth::routes();
 
+
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::resource('/posts', 'PostController');

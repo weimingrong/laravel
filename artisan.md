@@ -102,6 +102,7 @@ $factory->define(App\Models\Comment::class, function (Faker\Generator $faker) {
 
 ---
 ### tinker 批量生产测试数据
+`php artisan make:factory PostFactory -m Post`
 
 `php artisan tinker`
 `namespace App;`
