@@ -95,3 +95,14 @@ $factory->define(App\Models\Comment::class, function (Faker\Generator $faker) {
 
 
 ```
+---
+### artisan 修改表结构
+`php artisan make:migration add_author_filed_into_articles_table`
+
+
+---
+### tinker 批量生产测试数据
+
+`php artisan tinker`
+`namespace App;`
+`factory(User::class, 500)->create()`
