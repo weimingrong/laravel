@@ -38,3 +38,6 @@ server {
 ### 其他
 * **改变文件夹及子目录下所有文件（夹）权限` chmod -R 777 learnLaravel/`**
 * **要注意php版本和cli版本是否一致**
+* No application encryption key has been specified. 错误=> 
+ 解决：`php artisan key:generate`
+
