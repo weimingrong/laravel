@@ -22,3 +22,7 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::resource('/posts', 'PostController');
+
+Route::get('users/{users}', function (\App\User $user){
+    dd($user);
+});
