@@ -19,7 +19,7 @@
                     <a class="nav-link" href="{{ route('posts.index') }}">博客</a>
                 </li>
 
-                <!-- Authentication Links -->
+                {{--<!-- Authentication Links -->--}}
                 @guest
                     <li class="nav-item">
                         <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>

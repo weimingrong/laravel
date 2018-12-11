@@ -12,6 +12,9 @@
 
     @endforeach
 
-    <div style="margin-left: 1000px">{{$posts->links()}}</div>
+    <div class="row">
+        <div class="col-md-8"></div>
+        <div class="col-md-4">{{$posts->links()}}</div>
+    </div>
 
 @endsection

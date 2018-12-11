@@ -17,9 +17,9 @@
                 <label for="published_at" class="control_label">发表日期：</label>
                 <input id="published_at" name="published_at" type="date" class="form-control" value="{{date('Y-m-d')}}">
             </div>
-            <div class="form-control">
+            {{--<div class="form-control">--}}
                 <button type="submit">提交</button>
-            </div>
+            {{--</div>--}}
         </form>
     </div>
 

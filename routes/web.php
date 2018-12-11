@@ -26,3 +26,4 @@ Route::resource('/posts', 'PostController');
 Route::get('users/{users}', function (\App\User $user){
     dd($user);
 });
+//Route::get('/{any}', 'SinglePageController@index')->where('any', '.*');
