@@ -8,6 +8,8 @@
         <a href="{{url('posts', $post->id)}}">{{$post->title}}</a>
         {{--<a href="{{url('posts/'.$post->id)}}">{{$post->title}}</a>--}}
         {{--<a href="action('PostController@show',$post->id)"{{$post->title}}></a><!--不推荐-->--}}
+
+        <div>{{$post->published_at->diffForHumans()}}</div>
     </div>
 
     @endforeach

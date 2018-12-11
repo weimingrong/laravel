@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 use App\Post;
 use Illuminate\Support\Facades\Auth;
@@ -21,7 +22,7 @@ class PostController extends Controller
     public function index()
     {
         //
-        $posts = Post::latest()->paginate(6);
+        $posts = Post::where('published_at', '<', Carbon::now())->latest()->paginate(6);
         return view('posts.index', compact('posts'));
     }
 
@@ -49,7 +50,7 @@ class PostController extends Controller
         $datas = $request->all();
         $datas['author_id'] = Auth::id();
 //        dd(Post::create($datas));
-        Post::create();
+        Post::create($datas);
         return redirect('posts');
     }
 
