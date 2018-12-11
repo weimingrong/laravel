@@ -46,9 +46,9 @@ return [
             'provider' => 'users',
         ],
 
-        'guard-name' =>[
-
-        ]
+//        'guard-name' =>[
+//
+//        ]
     ],
 
     /*

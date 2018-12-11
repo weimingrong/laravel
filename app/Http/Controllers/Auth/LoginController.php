@@ -39,12 +39,12 @@ class LoginController extends Controller
     }
 
     //自定义认证字段 todo
-    public function username(){
-        return 'username';
-    }
-
-    //自定义guard todo
-    public function guard(){
-        return Auth::guard('guard_name'); //config/auth.php中需配置过该名称
-    }
+//    public function username(){
+//        return 'username';
+//    }
+//
+//    //自定义guard todo
+//    public function guard(){
+//        return Auth::guard('guard_name'); //config/auth.php中需配置过该名称
+//    }
 }
