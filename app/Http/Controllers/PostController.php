@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\BlogCreateRequest;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
 use App\Post;
@@ -43,11 +44,20 @@ class PostController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(BlogCreateRequest $request)
     {
+        //表单验证
+//        $request->validate([
+//            'title' => 'required|min:5|max:20',
+//            'body'  =>  'required|min:30',
+//            'published_at' => 'required|date',
+////            'email' => 'required|unique' //邮箱唯一
+//        ]);
+
         //
 //        dd($request->all());
         $datas = $request->all();
+
         $datas['author_id'] = Auth::id();
 //        dd(Post::create($datas));
         Post::create($datas);
