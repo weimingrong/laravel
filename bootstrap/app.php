@@ -26,16 +26,17 @@ $app = new Illuminate\Foundation\Application(
 |
 */
 
+//用于处理http网络请求
 $app->singleton(
     Illuminate\Contracts\Http\Kernel::class,
     App\Http\Kernel::class
 );
-
+//cli请求
 $app->singleton(
     Illuminate\Contracts\Console\Kernel::class,
     App\Console\Kernel::class
 );
-
+//处理应用运行异常的调试处理器
 $app->singleton(
     Illuminate\Contracts\Debug\ExceptionHandler::class,
     App\Exceptions\Handler::class
