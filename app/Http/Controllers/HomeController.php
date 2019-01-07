@@ -26,5 +26,7 @@ class HomeController extends Controller
     {
         return view('home');
         //a2
+
+        //a33
     }
 }
